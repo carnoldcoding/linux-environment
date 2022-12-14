@@ -38,6 +38,8 @@ mkdir ~/.config/tmux/plugins
 touch ~/.config/tmux/tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux
 ```
+
+### Copy Files
 Once this code has been run, copy the contents of ```dotfiles/tmux.conf``` ```~/.config/tmux/tmux.conf```
 
 To synchronize the configurations with TMUX, run the following. (This needs to be run anytime tmux.conf is changed, which is why our config binds 'prefix+r' to source the file for us.
