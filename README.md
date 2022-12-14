@@ -56,3 +56,10 @@ TMUX is written in C, and tmux.conf is a series of tmux-commands that execute fr
 ```bash
 sudo apt install neovim
 ```
+### Install Packer
+Packer is a lightweight lua-based package manager for NVIM. Extremely easy to use and extensible, run this script to install
+```bash
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+Packer allows for modular package management in NVIM.
