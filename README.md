@@ -28,3 +28,18 @@ This script will install PowerLevel10k, and set your shell's theme to it.
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 ```
+
+## TMUX
+### Install
+```bash
+sudo apt install tmux
+```
+### Install TPM
+Tmux Package Manager allows for quick and easy extensibility for base TMUX. These commands will create the proper filetree for TMUX/TPM, and install the package manager.
+```bash
+mkdir ~/.config/tmux
+mkdir ~/.config/tmux/plugins
+touch ~/.config/tmux/tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux
+```
+Once this code has been run download [this file]() and copy its contents into ```~/.config/tmux/tmux.conf```
