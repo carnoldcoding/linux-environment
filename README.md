@@ -26,5 +26,5 @@ Download and open all four files, each has their own "install" button. After you
 This script will install PowerLevel10k, and set your shell's theme to it.
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-echo 'ZSH_THEME="powerlevel10k/powerlevel10k" >> ~/.zshrc
+echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 ```
