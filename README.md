@@ -1,5 +1,5 @@
 # Linux Environment
-This repository serves as a guide to install my linux development configurations. Each instruction assumes completion of the last.
+This repository serves as a guide to install my linux development configurations for Linux Mint. Each instruction assumes completion of the last.
 
 ## ZSH
 ### Install ZSH
@@ -42,4 +42,11 @@ mkdir ~/.config/tmux/plugins
 touch ~/.config/tmux/tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux
 ```
-Once this code has been run download [this file]() and copy its contents into ```~/.config/tmux/tmux.conf```
+Once this code has been run, download this [tmux.conf]() and copy its contents into ```~/.config/tmux/tmux.conf```
+
+To synchronize the configurations with TMUX, run the following.
+```bash
+tmux source ~/.config/tmux/tmux.conf
+```
+
+TMUX is written in C, and tmux.conf is a series of tmux-commands that execute from top to bottom. The complete list of TMUX Commands is listed [here](https://linux.die.net/man/1/tmux).
