@@ -15,7 +15,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 
 ### Download Powerline Fonts
-Download and open all four files, each has their own "install" button. After you've installed the fonts, go to your terminal preferences and set the custom font to one of them.
+Download and open all four files, each has their own "install" button. After you've installed the fonts, go to your terminal preferences and set the custom font to one of them. These fonts support all powerline iterations, which prevents graphical errors.
 
 * [MesloLGS NF Regular](https://github.com/carnoldcoding/linux-environment/blob/main/fonts/MesloLGS%20NF%20Bold%20Italic.ttf)
 * [MesloLGS NF Bold](https://github.com/carnoldcoding/linux-environment/blob/main/fonts/MesloLGS%20NF%20Bold.ttf)
