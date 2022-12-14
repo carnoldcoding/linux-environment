@@ -16,7 +16,17 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 
 ### Install Powerline Fonts
-Open and install the four powerline fonts located in this repository's font folder. Once installed, go to your shell's preferences and set the custom font to match a powerline-supported one.
+Move all the contents of the ```fonts``` folder to ```~/.fonts``` on your machine. Then execute the command
+```bash
+fc-cache -f -v
+```
+Once this has been completed, go into your terminal's preferences and choose one of these four fonts
+* MesloLGS NF Regular
+* MesloLGS NF Bold
+* MesloLGS NF Italic
+* MesloLGS NF Bold Italic
+
+This will ensure that the terminal can display powerline's unique characters, and prevent any graphical errors.
 
 ### Install Powerlevel10K
 This script will install PowerLevel10k
