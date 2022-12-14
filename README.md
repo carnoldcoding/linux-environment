@@ -2,6 +2,7 @@
 This repository serves as a guide to install my linux development configurations for Linux Mint. Each instruction assumes completion of the last.
 First you must clone this repository.
 ## Tools
+These utilities are necessary to execute some of the following scripts.
 ```bash
 sudo apt install git -y
 sudo apt install curl -y
