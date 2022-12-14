@@ -2,16 +2,18 @@
 
 # Install Git
 if ! [ $(which git) ]; then
-	echo "You do not have git, installing now"
-	sudo apt install git
+	echo "You do not have git, press enter to install"
+	read
+	sudo apt install git -y
 else
 	echo "You already have git"
 fi
 
 # Install Curl
 if ! [ $(which curl) ]; then
-	echo "You do not have curl, installing now"
-	sudo apt install curl
+	echo "You do not have curl, press enter to install"
+	read
+	sudo apt install curl -y
 else
 	echo "You already have curl"
 fi

@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+# Install ZSH and run initial config wizard
+if ! [ $(which zsh) ]; then
+	echo "Press enter to install zsh"
+	read
+	sudo apt install zsh -y
+	
+	#Config Wizard
+	echo "Press enter to run zsh config wizard"
+	read
+	zsh
+
+	#Change default shell to zsh
+	echo "Press enter to change default shell. This will log you out for the changes to take effect."
+	chsh -s $(which zsh)
+	pkill -KILL -u $(who)
+else
+	echo "zsh already installed"
+fi
