@@ -50,3 +50,9 @@ tmux source ~/.config/tmux/tmux.conf
 ```
 
 TMUX is written in C, and tmux.conf is a series of tmux-commands that execute from top to bottom. The complete list of TMUX Commands is listed [here](https://linux.die.net/man/1/tmux).
+
+## NEOVIM
+### Install
+```bash
+sudo apt install neovim
+```
