@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+# Install Git
+if ! [ $(which git) ]; then
+	echo "You do not have git, installing now"
+	sudo apt install git
+else
+	echo "You already have git"
+fi
+
+# Install Curl
+if ! [ $(which curl) ]; then
+	echo "You do not have curl, installing now"
+	sudo apt install curl
+else
+	echo "You already have curl"
+fi
