@@ -1,5 +1,6 @@
 # Linux Environment
 This repository serves as a guide to install my linux development configurations for Linux Mint. Each instruction assumes completion of the last.
+First you must clone this repository.
 
 ## ZSH
 ### Install ZSH
@@ -14,20 +15,15 @@ zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### Download Powerline Fonts
-Download and open all four files, each has their own "install" button. After you've installed the fonts, go to your terminal preferences and set the custom font to one of them. These fonts support all powerline iterations, which prevents graphical errors.
-
-* [MesloLGS NF Regular](https://github.com/carnoldcoding/linux-environment/blob/main/fonts/MesloLGS%20NF%20Bold%20Italic.ttf)
-* [MesloLGS NF Bold](https://github.com/carnoldcoding/linux-environment/blob/main/fonts/MesloLGS%20NF%20Bold.ttf)
-* [MesloLGS NF Italic](https://github.com/carnoldcoding/linux-environment/blob/main/fonts/MesloLGS%20NF%20Italic.ttf)
-* [MesloLGS NF Bold Italic](https://github.com/carnoldcoding/linux-environment/blob/main/fonts/MesloLGS%20NF%20Bold%20Italic.ttf)
+### Install Powerline Fonts
+Open and install the four powerline fonts located in this repository's font folder. Once installed, go to your shell's preferences and set the custom font to match a powerline-supported one.
 
 ### Install Powerlevel10K
-This script will install PowerLevel10k, and set your shell's theme to it.
+This script will install PowerLevel10k
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 ```
+Once PowerLevel10k has installed, copy the contents of ```dotfiles/.zshrc``` to ```~/.zshrc```
 
 ## TMUX
 ### Install
@@ -42,7 +38,7 @@ mkdir ~/.config/tmux/plugins
 touch ~/.config/tmux/tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux
 ```
-Once this code has been run, download this [tmux.conf]() and copy its contents into ```~/.config/tmux/tmux.conf```
+Once this code has been run, copy the contents of ```dotfiles/tmux.conf``` ```~/.config/tmux/tmux.conf```
 
 To synchronize the configurations with TMUX, run the following. (This needs to be run anytime tmux.conf is changed, which is why our config binds 'prefix+r' to source the file for us.
 ```bash
