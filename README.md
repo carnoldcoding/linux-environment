@@ -63,7 +63,14 @@ To synchronize the configurations with TMUX, run the following. (This needs to b
 ```bash
 tmux source ~/.config/tmux/tmux.conf
 ```
+After the file has been sourced, the plugins need to be refreshed.
+```bash
+# Initialize Plugins
+Prefix + I
 
+# Update Plugins
+Prefix + U
+```
 TMUX is written in C, and tmux.conf is a series of tmux-commands that execute from top to bottom. The complete list of TMUX Commands is listed [here](https://linux.die.net/man/1/tmux).
 
 ## NEOVIM
