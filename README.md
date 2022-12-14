@@ -52,7 +52,8 @@ Tmux Package Manager allows for quick and easy extensibility for base TMUX. Thes
 mkdir ~/.config/tmux
 mkdir ~/.config/tmux/plugins
 touch ~/.config/tmux/tmux.conf
-git clone https://github.com/tmux-plugins/tpm ~/.config/tmux
+cd ~/.config/tmux/plugins
+git clone https://github.com/tmux-plugins/tpm 
 ```
 
 ### Copy Files
