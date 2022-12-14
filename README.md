@@ -1,5 +1,6 @@
 # Linux Environment
 This repository serves as a guide to install my linux development configurations for Linux Mint. Each instruction assumes completion of the last.
+First you must clone this repository.
 
 ## ZSH
 ### Install ZSH
@@ -14,20 +15,25 @@ zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### Download Powerline Fonts
-Download and open all four files, each has their own "install" button. After you've installed the fonts, go to your terminal preferences and set the custom font to one of them. These fonts support all powerline iterations, which prevents graphical errors.
+### Install Powerline Fonts
+Move all the contents of the ```fonts``` folder to ```~/.fonts``` on your machine. Then execute the command
+```bash
+fc-cache -f -v
+```
+Once this has been completed, go into your terminal's preferences and choose one of these four fonts
+* MesloLGS NF Regular
+* MesloLGS NF Bold
+* MesloLGS NF Italic
+* MesloLGS NF Bold Italic
 
-* [MesloLGS NF Regular](https://github.com/carnoldcoding/linux-environment/blob/main/fonts/MesloLGS%20NF%20Bold%20Italic.ttf)
-* [MesloLGS NF Bold](https://github.com/carnoldcoding/linux-environment/blob/main/fonts/MesloLGS%20NF%20Bold.ttf)
-* [MesloLGS NF Italic](https://github.com/carnoldcoding/linux-environment/blob/main/fonts/MesloLGS%20NF%20Italic.ttf)
-* [MesloLGS NF Bold Italic](https://github.com/carnoldcoding/linux-environment/blob/main/fonts/MesloLGS%20NF%20Bold%20Italic.ttf)
+This will ensure that the terminal can display powerline's unique characters, and prevent any graphical errors.
 
 ### Install Powerlevel10K
-This script will install PowerLevel10k, and set your shell's theme to it.
+This script will install PowerLevel10k
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 ```
+Once PowerLevel10k has installed, copy the contents of ```dotfiles/.zshrc``` to ```~/.zshrc```
 
 ## TMUX
 ### Install
@@ -42,7 +48,9 @@ mkdir ~/.config/tmux/plugins
 touch ~/.config/tmux/tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux
 ```
-Once this code has been run, download this [tmux.conf]() and copy its contents into ```~/.config/tmux/tmux.conf```
+
+### Copy Files
+Once this code has been run, copy the contents of ```dotfiles/tmux.conf``` ```~/.config/tmux/tmux.conf```
 
 To synchronize the configurations with TMUX, run the following. (This needs to be run anytime tmux.conf is changed, which is why our config binds 'prefix+r' to source the file for us.
 ```bash
@@ -50,3 +58,22 @@ tmux source ~/.config/tmux/tmux.conf
 ```
 
 TMUX is written in C, and tmux.conf is a series of tmux-commands that execute from top to bottom. The complete list of TMUX Commands is listed [here](https://linux.die.net/man/1/tmux).
+
+## NEOVIM
+### Install
+```bash
+sudo apt install neovim
+```
+### Install Packer
+Packer is a lightweight lua-based package manager for NVIM that allows for modular package management. Run this script to install..
+```bash
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
+### Copy Files
+Once Packer has been installed, move the ```nvim``` directory into ```~/.config```
+
+Then open vim, and run ```:PackerSync```, ```:PackerCompile``` and ```:PackerUpdate```
+
+At this point everything should be all set to run. Happy Coding!
