@@ -23,6 +23,10 @@ Complete the setup wizard to generate the default .zshrc file
 sudo apt install zsh
 zsh
 ```
+Once the setup is complete, make zsh your default shell and logout. Upon logging back in your kernel will be zsh by default.
+```bash
+chsh -s $(which zsh)
+```
 
 ### Install OhMyZSH
 ```bash
