@@ -1,6 +1,11 @@
 # Linux Environment
 This repository serves as a guide to install my linux development configurations for Linux Mint. Each instruction assumes completion of the last.
 First you must clone this repository.
+## Tools
+```bash
+sudo apt install git -y
+sudo apt install curl -y
+```
 
 ## ZSH
 ### Install ZSH
