@@ -44,7 +44,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux
 ```
 Once this code has been run, download this [tmux.conf]() and copy its contents into ```~/.config/tmux/tmux.conf```
 
-To synchronize the configurations with TMUX, run the following.
+To synchronize the configurations with TMUX, run the following. (This needs to be run anytime tmux.conf is changed, which is why our config binds 'prefix+r' to source the file for us.
 ```bash
 tmux source ~/.config/tmux/tmux.conf
 ```
