@@ -1,6 +1,14 @@
 # Linux Environment
 This repository serves as a guide to install my linux development configurations for Linux Mint. Each instruction assumes completion of the last.
 First you must clone this repository.
+## Automated Installation
+Clone the repository, then run the bash scripts in this order
+* install-tools
+* install-zsh
+
+## Manual Installation
+Follow the instructions below if you prefer not to use bash scripting to install the configurations.
+
 ## Tools
 These utilities are necessary to execute some of the following scripts.
 ```bash
@@ -14,6 +22,10 @@ Complete the setup wizard to generate the default .zshrc file
 ```bash
 sudo apt install zsh
 zsh
+```
+Once the setup is complete, make zsh your default shell and logout. Upon logging back in your kernel will be zsh by default.
+```bash
+chsh -s $(which zsh)
 ```
 
 ### Install OhMyZSH
