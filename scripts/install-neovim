@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if ! [ $(which nvim) ]; then
+	echo "Press enter to install neovim"
+	sudo apt install neovim -y
+	
+	# Install Packer
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+	cp ../nvim ~/.config
+	echo "\n Once you open neovim, run :PackerSync, :PackerUpdate, and :PackerCompile to initialize the plugins. Press enter to continue"
+	read
+else
+	echo "Neovim already installed"
+fi

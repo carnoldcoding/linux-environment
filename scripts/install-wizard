@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Press enter to begin installing configurations"
+read
+bash install-tools
+bash install-zsh
+bash install-tmux
+bash install-neovim
+echo "\n ==INSTALLATION COMPLETE=="
+echo "\n Some changes require a computer restart to be finalized, please restart your computer"
