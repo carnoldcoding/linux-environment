@@ -25,8 +25,10 @@ else
 fi
 
 if ! [[ -n $(find ~/.fonts -name "MesloLGS*") ]]; then
-	mv ../fonts/* ~/.fonts
+	cp ../fonts/* ~/.fonts
 	sudo fc-cache -f -v
+	echo "Go to Terminal -> Preferences and set the custom font to any MesloLGS font. Press enter when done."
+	read
 else
 	echo "Fonts already installed"
 fi
@@ -37,7 +39,6 @@ if ! [ ~/.oh-my-zsh/custom/themes/powerlevel10k ]; then
 	echo "PowerLevel10k already installed"
 	read
 	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-	echo "You must open .zshrc and set ZSH_THEME='powerlevel10k/powerlevel10k' before oh-my-zsh is sourced."
 else
 	echo "You already have PowerLevel10k Installed"
 fi
