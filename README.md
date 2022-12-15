@@ -2,9 +2,7 @@
 This repository serves as a guide to install my linux development configurations for Linux Mint. Each instruction assumes completion of the last.
 First you must clone this repository.
 ## Automated Installation
-Clone the repository, then run the bash scripts in this order
-* install-tools
-* install-zsh
+Clone the repository, then run the install wizard bash script in the ```/scripts``` folder.
 
 ## Manual Installation
 Follow the instructions below if you prefer not to use bash scripting to install the configurations.
