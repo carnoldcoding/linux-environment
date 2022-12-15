@@ -11,9 +11,33 @@ if ! [ $(which zsh) ]; then
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 	#Change default shell to zsh
-	echo "Press enter to change default shell. This will log you out for the changes to take effect."
+	echo "Press enter to change zsh to your default shell"
 	chsh -s $(which zsh)
-	pkill -u $(whoami)
 else
 	echo "zsh already installed"
+fi
+
+# Install Fonts for PowerLevel10K
+if ! [ ~/.fonts ]; then
+	mkdir ~/.fonts
+else
+	echo "Font directory exists"
+fi
+
+if ! [[ -n $(find ~/.fonts -name "MesloLGS*") ]]; then
+	mv ../fonts/* ~/.fonts
+	sudo fc-cache -f -v
+else
+	echo "Fonts already installed"
+fi
+
+# Install PowerLevel10K for OhMyZSH
+
+if ! [ ~/.oh-my-zsh/custom/themes/powerlevel10k ]; then
+	echo "PowerLevel10k already installed"
+	read
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+	echo "You must open .zshrc and set ZSH_THEME='powerlevel10k/powerlevel10k' before oh-my-zsh is sourced."
+else
+	echo "You already have PowerLevel10k Installed"
 fi
