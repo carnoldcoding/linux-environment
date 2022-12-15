@@ -4,7 +4,7 @@ First you must clone this repository.
 ## Automated Installation
 Clone the repository, then run ```/scripts/install-wizard``` to begin installation.
 These scripts install the following tech stack:
-### Stack
+### Script Install Stack
 * ZSH || OhMyZsh
   * Powerline Fonts || MesloLGM NF
   * PowerLevel10k (Powerline)
@@ -13,3 +13,6 @@ These scripts install the following tech stack:
 * NVIM || Packer (Vim Package Manager)
   * Lualine
   * OneDarkPro (Theme)
+  * LSPConfig
+
+## Language Server Protocol For NVIM
