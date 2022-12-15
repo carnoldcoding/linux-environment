@@ -36,9 +36,32 @@ fi
 # Install PowerLevel10K for OhMyZSH
 
 if ! [ ~/.oh-my-zsh/custom/themes/powerlevel10k ]; then
-	echo "PowerLevel10k already installed"
+	echo "Press enter to install PowerLevel10k"
 	read
 	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 else
-	echo "You already have PowerLevel10k Installed"
+	echo "PowerLevel10k already installed"
 fi
+
+# Install ZSH Plugins
+if ! [ ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
+	echo "Press enter to install Zsh-Autosuggestions"
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+else
+	echo "zsh-autosuggestions already installed"
+fi
+
+if ! [ ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]; then
+	echo "Press enter to install zsh-syntax-highliting"
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+	echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+	source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+	echo "zsh-syntax-highlighting already installed"
+fi
+
+# Copy contents of git zshrc into machine zshrc
+echo "Press enter to update and refresh .zshrc"
+read
+> ~/.zshrc
+cat ../dotfiles/zshrc >> ~/.zshrc

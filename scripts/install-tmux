@@ -1,0 +1,20 @@
+#!/bin/bash
+if ! [ $(which tmux) ]; then
+	echo "Press enter to install tmux"
+	read
+	sudo apt install tmux
+else
+	echo "tmux already installed"
+fi
+
+if ! [ -d ~/.config/tmux ]; then
+	echo "Press enter to install TPM"
+	read
+	mkdir ~/.config/tmux
+	mkdir ~/.config/tmux/plugins
+	git clone https://github.com/tmux-plugins/tpm  ~/.config/tmux/plugins
+	cp ../dotfiles/tmux.conf ~/.config/tmux
+	tmux source ~/.config/tmux/tmux.conf
+else
+	echo "tpm already installed"
+fi
