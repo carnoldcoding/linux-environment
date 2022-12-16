@@ -18,7 +18,7 @@ else
 fi
 
 # Install Fonts for PowerLevel10K
-if ! [ ~/.fonts ]; then
+if ! [ -d ~/.fonts ]; then
 	mkdir ~/.fonts
 else
 	echo "Font directory exists"
@@ -35,7 +35,7 @@ fi
 
 # Install PowerLevel10K for OhMyZSH
 
-if ! [ ~/.oh-my-zsh/custom/themes/powerlevel10k ]; then
+if ! [ -d ~/.oh-my-zsh/custom/themes/powerlevel10k ]; then
 	echo "Press enter to install PowerLevel10k"
 	read
 	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
