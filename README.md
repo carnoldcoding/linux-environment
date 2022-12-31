@@ -14,7 +14,7 @@ These scripts install the following tech stack:
   * Lualine
   * OneDarkPro (Theme)
   * LSPConfig
-  * TreeSitter (Better Highlighting)
+  * TreeSitter (Better Highlighting + Plugins)
   * Bufferline (Buffer styling/cutsomization)
   * NVIM Tree (Directory Traversal UI)
 
