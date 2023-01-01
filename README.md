@@ -15,6 +15,9 @@ These scripts install the following tech stack:
   * OneDarkPro (Theme)
   * LSPConfig
   * LSPKind (Better Icons for LSP)
+  * Luasnip (LSP Snippets)
+  * LSPSaga (LSP UI Functionality)
+  * Trouble.nvim (LSP Diagnostics)
   * TreeSitter (Better Highlighting + Plugins)
   * Bufferline (Buffer styling/cutsomization)
   * NVIM WhichKey (UI/Manager For Custom Keybinds)
