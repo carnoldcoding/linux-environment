@@ -18,6 +18,12 @@ These scripts install the following tech stack:
   * Bufferline (Buffer styling/cutsomization)
   * NVIM WhichKey (UI/Manager For Custom Keybinds)
   * NVIM Telescope (Fuzzy Finder/File Browser)
+  * NVIM CMP (Autocomplete)Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
 
 ## Language Server Protocol For NVIM
 Language Server Protocol (LSP) allows programming language developers to create one set of rules for their language that can be adopted by any IDE as long as the IDE supports LSP. This way developers don't have to continuously create multiple versions of their language for each major IDE.
