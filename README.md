@@ -18,6 +18,7 @@ These scripts install the following tech stack:
   * Bufferline (Buffer styling/cutsomization)
   * NVIM WhichKey (UI/Manager For Custom Keybinds)
   * NVIM Telescope (Fuzzy Finder/File Browser)
+  * Dashboard (Using Telescope)
   * NVIM CMP (Autocomplete)
 
 ## Language Server Protocol For NVIM
