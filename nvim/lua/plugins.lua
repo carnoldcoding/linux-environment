@@ -5,9 +5,6 @@
 	--colorscheme
 	use 'olimorris/onedarkpro.nvim'
 
-	--closing brackets
-	use 'm4xshen/autoclose.nvim'
-
 	--lualine (powerline alternative)
 	use {
   	'nvim-lualine/lualine.nvim',
@@ -17,24 +14,32 @@
 	--Language Server Protocol (language formatting)
 	use 'neovim/nvim-lspconfig'
 
-	--Web Dev Icons (Icons for NVIM Tree Support)
+    --LSP CMP (Auto Complete Plugin)
+    use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+
+	--Web Dev Icons (Icons for most UI heavy plugins)
 	use 'nvim-tree/nvim-web-devicons'
 
 	--Whichkey (UI to display potential commands)
 	use 'folke/which-key.nvim'
 
-	--NVIM Tree (File Tree Manuevering)
-	use {'nvim-tree/nvim-tree.lua', requires = {'nvim-tree/nvim-web-devicons'}, tag = 'nightly'}
-
 	--Bufferline (Tabular Status Updates/Styling for open buffers)
 	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
-	--Telescope (Fuzzy Finder)
+	--Telescope (Fuzzy File Finder/File Browser)
 	use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	-- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
 	}
+
+    --Telescope File Browser
+    use { "nvim-telescope/telescope-file-browser.nvim" }
 
 	--Treesitter Autopair (Closes tags and indents, works with Treesitter)
 	use {'windwp/nvim-autopairs'}
