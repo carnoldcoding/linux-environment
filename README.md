@@ -14,5 +14,14 @@ These scripts install the following tech stack:
   * Lualine
   * OneDarkPro (Theme)
   * LSPConfig
+  * TreeSitter (Better Highlighting + Plugins)
+  * Bufferline (Buffer styling/cutsomization)
+  * NVIM Tree (Directory Traversal UI)
 
 ## Language Server Protocol For NVIM
+Language Server Protocol (LSP) allows programming language developers to create one set of rules for their language that can be adopted by any IDE as long as the IDE supports LSP. This way developers don't have to continuously create multiple versions of their language for each major IDE.
+
+LSP's are installed globally, because they are not specific to the NVIM environment, they are just supported by it through use of LSPConfig. This also means that if you're having an issue with LSP and Nvim, you should also make sure your node/npm versions are up to date, and the language server was installed properly on your shell of choice.
+
+### LSPs
+* Tsserver
