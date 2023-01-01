@@ -29,7 +29,14 @@
 	--Bufferline (Tabular Status Updates/Styling for open buffers)
 	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
-	--Autopair (Closes tags and indents, works with Treesitter)
+	--Telescope (Fuzzy Finder)
+	use {
+	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+	-- or                            , branch = '0.1.x',
+	  requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
+	--Treesitter Autopair (Closes tags and indents, works with Treesitter)
 	use {'windwp/nvim-autopairs'}
 
 	--Treesitter auto-tag

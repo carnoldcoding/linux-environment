@@ -19,8 +19,16 @@ map('n', '<leader>x', ':bd<cr>', 'Closer Buffer')
 ----NvimTree Binds
 map('n', '<leader>e', ':NvimTreeToggle<CR>', 'Toggle Tree') 
 
+----Bufferline Binds
+map('n', '<TAB>', ':BufferLineCycleNext<CR>', 'Next Buffer')
+map('n', '<S-TAB>', ':BufferLineCyclePrev<CR>', 'Last Buffer')
+
 ----Window Movement
 map('n', '<leader>h', '<C-w>h', 'Switch to Left Buffer')
 map('n', '<leader>l', '<C-w>l', 'Switch to Right Buffer')
 map('n', '<leader>j', '<C-w>j', 'Switch to Bottom Buffer')
 map('n', '<leader>k', '<C-w>k', 'Switch to Top Buffer')
+
+--Telescope Binds
+map('n', '<leader>ff', ':Telescope find_files<cr>', 'Open Telescope Find File Menu')
+map('n', '<leader>fg', ':Telescope live_grep<cr>', 'Open Telescope Live Grep')

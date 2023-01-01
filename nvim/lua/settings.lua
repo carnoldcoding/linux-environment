@@ -10,5 +10,11 @@ o.ignorecase = true
 o.incsearch = true
 o.noswapfile = true
 
+----Tab Work
+o.expandtab = true
+o.tabstop = 4
+o.shiftwidth = 4
+
+
 --Visual
 o.number = true
