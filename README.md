@@ -17,6 +17,7 @@ These scripts install the following tech stack:
   * TreeSitter (Better Highlighting + Plugins)
   * Bufferline (Buffer styling/cutsomization)
   * NVIM Tree (Directory Traversal UI)
+  * NVIM WhichKey (UI For Custom Keybinds/Functions)
 
 ## Language Server Protocol For NVIM
 Language Server Protocol (LSP) allows programming language developers to create one set of rules for their language that can be adopted by any IDE as long as the IDE supports LSP. This way developers don't have to continuously create multiple versions of their language for each major IDE.
