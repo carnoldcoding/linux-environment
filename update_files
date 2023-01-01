@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Press any button to update files"
+read
+
+rm -rf nvim
+cp -r ~/.config/nvim .
+echo "Update complete"
