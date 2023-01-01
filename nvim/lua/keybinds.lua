@@ -14,7 +14,7 @@ map('i', 'jk', '<ESC>', 'Insert Mode')
 map('n', '<leader>q', ':q<cr>', 'Quit')
 map('n', '<leader>Q', ':wq<cr>', 'Save & Quit')
 map('n', '<leader>w', ':w<cr>', 'Save')
-map('n', '<leader>x', ':bd<cr>', 'Closer Buffer')
+map('n', '<leader>d', ':bd<cr>', 'Delete Buffer')
 
 ----NvimTree Binds
 map('n', '<leader>e', ':NvimTreeToggle<CR>', 'Toggle Tree') 
@@ -32,3 +32,6 @@ map('n', '<leader>k', '<C-w>k', 'Switch to Top Buffer')
 --Telescope Binds
 map('n', '<leader>ff', ':Telescope find_files<cr>', 'Open Telescope Find File Menu')
 map('n', '<leader>fg', ':Telescope live_grep<cr>', 'Open Telescope Live Grep')
+
+--Packer
+map('n', '<leader>ps', ':PackerSync<cr>', 'Sync Packer Plugins')
