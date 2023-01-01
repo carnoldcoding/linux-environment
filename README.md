@@ -14,6 +14,7 @@ These scripts install the following tech stack:
   * Lualine
   * OneDarkPro (Theme)
   * LSPConfig
+  * LSPKind (Better Icons for LSP)
   * TreeSitter (Better Highlighting + Plugins)
   * Bufferline (Buffer styling/cutsomization)
   * NVIM WhichKey (UI/Manager For Custom Keybinds)
