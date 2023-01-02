@@ -14,8 +14,10 @@
 	--Language Server Protocol (language formatting)
 	use 'neovim/nvim-lspconfig'
 
+    --LSPKind (Prettier LSP)
+    use 'onsails/lspkind.nvim'
+
     --LSP CMP (Auto Complete Plugin)
-    use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
@@ -40,6 +42,9 @@
 
     --Telescope File Browser
     use { "nvim-telescope/telescope-file-browser.nvim" }
+
+    --Dashboard (Configured to use Telescope)
+    use {'glepnir/dashboard-nvim'}
 
 	--Treesitter Autopair (Closes tags and indents, works with Treesitter)
 	use {'windwp/nvim-autopairs'}
