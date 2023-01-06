@@ -24,6 +24,11 @@
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
 
+    --LSP CMP Luasnip (Snipper Plugin for LSP using CMP)
+    use({"L3MON4D3/LuaSnip", tag = "v1.*"})
+    use 'saadparwaiz1/cmp_luasnip'
+    use 'rafamadriz/friendly-snippets'
+
 	--Web Dev Icons (Icons for most UI heavy plugins)
 	use 'nvim-tree/nvim-web-devicons'
 

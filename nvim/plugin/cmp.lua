@@ -12,8 +12,20 @@ end
 vim.g.completeopt = "menu,menuone,noselect, noinsert"
 local cmp = require'cmp'
 local lspkind = require'lspkind'
+local luasnip = require'luasnip'
 
 cmp.setup({
+    --Luasnip Settings
+    snippet = {
+      expand = function(args)
+        require'luasnip'.lsp_expand(args.body)
+      end
+    },
+
+    sources = {
+      { name = 'luasnip' },
+      -- more sources
+    },
     --LSPKind formatting for cmp icons
     formatting = {
     format = lspkind.cmp_format({
@@ -51,6 +63,29 @@ cmp.setup({
             cmp.select_prev_item()
           elseif vim.fn["vsnip#jumpable"](-1) == 1 then
             feedkey("<Plug>(vsnip-jump-prev)", "")
+          end
+        end, { "i", "s" }),
+
+            
+        ["<Tab>"] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.select_next_item()
+          elseif luasnip.expand_or_jumpable() then
+            luasnip.expand_or_jump()
+          elseif has_words_before() then
+            cmp.complete()
+          else
+            fallback()
+          end
+        end, { "i", "s" }),
+
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.select_prev_item()
+          elseif luasnip.jumpable(-1) then
+            luasnip.jump(-1)
+          else
+            fallback()
           end
         end, { "i", "s" }),
 
