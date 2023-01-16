@@ -12,7 +12,6 @@ db.custom_header = {
 db.custom_center = {
     {desc = 'Find File         ', action = ':Telescope find_files'},
     {desc = 'Recent Files      ', action = ':Telescope oldfiles'},
-    {desc = 'File Browser      ', action = ':Telescope file_browser'},
     {desc = 'Plugins           ', action = ':e ~/.config/nvim/lua/plugins.lua'}
 }
 

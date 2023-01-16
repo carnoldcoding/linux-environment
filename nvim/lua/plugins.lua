@@ -29,6 +29,9 @@
     use 'saadparwaiz1/cmp_luasnip'
     use 'rafamadriz/friendly-snippets'
 
+    --LSPSaga (Code Actions and Others)
+    use {"glepnir/lspsaga.nvim", branch = "main"}
+
 	--Web Dev Icons (Icons for most UI heavy plugins)
 	use 'nvim-tree/nvim-web-devicons'
 
@@ -45,8 +48,8 @@
 	  requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-    --Telescope File Browser
-    use { "nvim-telescope/telescope-file-browser.nvim" }
+    --NVIM Tree (File Browser)
+    use {'nvim-tree/nvim-tree.lua', requires={'nvim-tree/nvim-web-devicons'}, tag='nightly'}
 
     --Dashboard (Configured to use Telescope)
     use {'glepnir/dashboard-nvim'}

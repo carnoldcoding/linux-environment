@@ -12,21 +12,4 @@ require('telescope').setup{
             }
         }
     },
-    extensions = {
-        file_browser = {
-            hijack_netrw = true,
-            initial_mode = "normal",
-            mappings = {
-                ["i"] = {
-
-                },
-                ["n"] = {
-
-                }
-            }
-        }
-    }
 }
-
---Load file browser extension/attach it to Telescope
-require("telescope").load_extension "file_browser"

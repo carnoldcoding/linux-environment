@@ -1,6 +1,6 @@
 --Remap Function
 function map(mode, keys, action, descr, opts)
-	local options = { noremap = true, desc = descr }
+    local options = { noremap = true, desc = descr }
 	if opts then
 		options = vim.tbl_extend("force", options, opts)
 	end
@@ -29,8 +29,13 @@ map('n', '<leader>k', '<C-w>k', 'Switch to Top Buffer')
 --Telescope Binds
 map('n', '<leader>ff', ':Telescope find_files<cr>', 'Open Telescope File Finder')
 map('n', '<leader>fg', ':Telescope live_grep<cr>', 'Open Telescope Live Grep')
-----Telescope Plugin (Telescope File Browser)
-map('n', '<leader>fb', ':Telescope file_browser<cr>', 'Open Telescope File/Directory Browser')
+
+--LSP Saga
+map('n', '<leader>t', ':Lspsaga term_toggle<cr>', 'Open Floating Terminal')
+map('n', '<leader>gd', ':Lspsaga peek_definition<cr>', 'Open Buffer for Definition Source')
+
+--Nvim Tree
+map('n', '<leader>e', ':NvimTreeToggle<cr>', 'Toggle Nvim Tree')
 
 --Packer
 map('n', '<leader>ps', ':PackerSync<cr>', 'Sync Packer Plugins')

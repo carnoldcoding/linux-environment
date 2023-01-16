@@ -23,7 +23,7 @@ cmp.setup({
     },
 
     sources = {
-      { name = 'luasnip' },
+      { name = 'luasnip', option = { show_autosnippets = true }},
       -- more sources
     },
     --LSPKind formatting for cmp icons
@@ -58,6 +58,7 @@ cmp.setup({
           end
         end, { "i", "s" }),
 
+        --Tab up and down Luasnip suggestion list
         ["<S-Tab>"] = cmp.mapping(function()
           if cmp.visible() then
             cmp.select_prev_item()
@@ -93,7 +94,7 @@ cmp.setup({
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.
-      -- { name = 'luasnip' }, -- For luasnip users.
+      { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
     }, {
