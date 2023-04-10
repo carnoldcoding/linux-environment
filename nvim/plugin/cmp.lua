@@ -58,7 +58,6 @@ cmp.setup({
           end
         end, { "i", "s" }),
 
-        --Tab up and down Luasnip suggestion list
         ["<S-Tab>"] = cmp.mapping(function()
           if cmp.visible() then
             cmp.select_prev_item()
@@ -67,7 +66,7 @@ cmp.setup({
           end
         end, { "i", "s" }),
 
-            
+        --Tab up and down Luasnip
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()

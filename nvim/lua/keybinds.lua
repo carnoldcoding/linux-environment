@@ -36,6 +36,3 @@ map('n', '<leader>gd', ':Lspsaga peek_definition<cr>', 'Open Buffer for Definiti
 
 --Nvim Tree
 map('n', '<leader>e', ':NvimTreeToggle<cr>', 'Toggle Nvim Tree')
-
---Packer
-map('n', '<leader>ps', ':PackerSync<cr>', 'Sync Packer Plugins')

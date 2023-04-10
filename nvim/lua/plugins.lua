@@ -52,7 +52,7 @@
     use {'nvim-tree/nvim-tree.lua', requires={'nvim-tree/nvim-web-devicons'}, tag='nightly'}
 
     --Dashboard (Configured to use Telescope)
-    use {'glepnir/dashboard-nvim'}
+    use {'glepnir/dashboard-nvim'} 
 
 	--Treesitter Autopair (Closes tags and indents, works with Treesitter)
 	use {'windwp/nvim-autopairs'}

@@ -1,18 +1,14 @@
-local db = require('dashboard')
-
-db.custom_header = {
-[[ ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗]],
-[[ ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║]],
-[[ ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║]],
-[[ ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║]],
-[[ ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║]],
-[[ ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝]]
-}
-
-db.custom_center = {
-    {desc = 'Find File         ', action = ':Telescope find_files'},
-    {desc = 'Recent Files      ', action = ':Telescope oldfiles'},
-    {desc = 'Plugins           ', action = ':e ~/.config/nvim/lua/plugins.lua'}
-}
-
-db.custom_footer = {"The sculptor and the marble"}
+require('dashboard').setup({
+    theme = 'hyper', 
+    config = {
+        shortcut = {
+            {desc="Update", group="featured", key = 'u', action = ':PackerSync'},
+            {desc="Files", group="featured", key = 'f', action = ':Telescope find_files'},
+        },
+        week_header = {
+            enable = true
+        },
+        packages = {enable = true},
+        footer = {"The Sculptor and the Marble"}
+    },
+})
