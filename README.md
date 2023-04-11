@@ -17,6 +17,7 @@ These scripts install the following tech stack:
   * LSPKind (Better Icons for LSP)
   * Luasnip (LSP Snippets)
   * LSPSaga (LSP UI Functionality)
+  * Mason || Mason LSP-Config (LSP Manager/Installer)
   * Trouble.nvim (LSP Diagnostics)
   * TreeSitter (Better Highlighting + Plugins)
   * Bufferline (Buffer styling/cutsomization)
