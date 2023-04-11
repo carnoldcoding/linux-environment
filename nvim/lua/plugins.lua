@@ -14,7 +14,7 @@
 	--Language Server Protocol (language formatting)
 	use 'neovim/nvim-lspconfig'
 
-    --LSPKind (Prettier LSP)
+    --LSPKind (Prettier LSP, Works with CMP)
     use 'onsails/lspkind.nvim'
 
     --LSP CMP (Auto Complete Plugin)
@@ -31,6 +31,12 @@
 
     --LSPSaga (Code Actions and Others)
     use {"glepnir/lspsaga.nvim", branch = "main"}
+
+    --Mason LSP Manager
+    use {"williamboman/mason.nvim", build = ":MasonUpdate"}
+
+    --Mason w/ LSP-Config
+    use {"williamboman/mason-lspconfig.nvim"}
 
 	--Web Dev Icons (Icons for most UI heavy plugins)
 	use 'nvim-tree/nvim-web-devicons'
