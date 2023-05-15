@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/logia/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
+  emmet = {
+    loaded = true,
+    path = "/home/logia/.local/share/nvim/site/pack/packer/start/emmet",
+    url = "https://github.com/pedro757/emmet"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/logia/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -143,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/logia/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/logia/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,

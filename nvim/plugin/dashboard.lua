@@ -3,7 +3,8 @@ require('dashboard').setup({
     config = {
         shortcut = {
             {desc="Update", group="featured", key = 'u', action = ':PackerSync'},
-            {desc="Files", group="featured", key = 'f', action = ':Telescope find_files'},
+            {desc="Find File", group="featured", key = 'f', action = ':Telescope find_files'},
+            {desc="File Tree", group="featured", key = 'e', action=':NvimTreeToggle'}
         },
         week_header = {
             enable = true

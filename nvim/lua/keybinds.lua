@@ -8,7 +8,7 @@ function map(mode, keys, action, descr, opts)
 end
 
 --Insert Mode
-map('i', 'jk', '<ESC>', 'Insert Mode')
+map('i', 'jk', '<ESC>', 'Exit Insert Mode')
 
 --Normal Mode
 map('n', '<leader>q', ':q<cr>', 'Quit')
@@ -31,8 +31,14 @@ map('n', '<leader>ff', ':Telescope find_files<cr>', 'Open Telescope File Finder'
 map('n', '<leader>fg', ':Telescope live_grep<cr>', 'Open Telescope Live Grep')
 
 --LSP Saga
-map('n', '<leader>t', ':Lspsaga term_toggle<cr>', 'Open Floating Terminal')
 map('n', '<leader>gd', ':Lspsaga peek_definition<cr>', 'Open Buffer for Definition Source')
 
 --Nvim Tree
 map('n', '<leader>e', ':NvimTreeToggle<cr>', 'Toggle Nvim Tree')
+
+--Null LS
+map('n', '<leader>ni', ':NullLsInfo<cr>', 'Null-LS Language Info')
+map('n', '<leader>nf', ':lua vim.lsp.buf.format()<cr>', 'Null-LS Format File')
+
+--ToggleTerm
+map('n', '<leader>t', ':ToggleTerm<cr>', 'Toggle Terminal')

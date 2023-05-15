@@ -24,6 +24,9 @@
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
 
+    --LSP Emmet (Emmet Shortcuts w/ Luasnip and CMP)
+    use 'pedro757/emmet'
+
     --LSP CMP Luasnip (Snipper Plugin for LSP using CMP)
     use({"L3MON4D3/LuaSnip", tag = "v1.*"})
     use 'saadparwaiz1/cmp_luasnip'
@@ -32,10 +35,13 @@
     --LSPSaga (Code Actions and Others)
     use {"glepnir/lspsaga.nvim", branch = "main"}
 
-    --Mason LSP Manager
+    --Null LS (Support for 3rd Party Formatting/Linting)
+    use('jose-elias-alvarez/null-ls.nvim')
+
+    --Mason LSP Manager (Easy Installation and Management of LS)
     use {"williamboman/mason.nvim", build = ":MasonUpdate"}
 
-    --Mason w/ LSP-Config
+    --Mason w/ LSP-Config (Adds APIs to make LSP Management Easier)
     use {"williamboman/mason-lspconfig.nvim"}
 
 	--Web Dev Icons (Icons for most UI heavy plugins)
