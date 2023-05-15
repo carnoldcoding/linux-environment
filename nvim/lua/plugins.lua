@@ -44,6 +44,9 @@
     --Mason w/ LSP-Config (Adds APIs to make LSP Management Easier)
     use {"williamboman/mason-lspconfig.nvim"}
 
+    --GitSigns (GitHub Support for Buffers)
+    use {"lewis6991/gitsigns.nvim"}
+
 	--Web Dev Icons (Icons for most UI heavy plugins)
 	use 'nvim-tree/nvim-web-devicons'
 
